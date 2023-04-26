@@ -20,6 +20,8 @@ The reading will be supplemented with:
 
  - Selected exercises from [C Programming: A Modern Approach](http://knking.com/books/c2/) by K. N. King (shared under fair use).
  - The [chapter on R's C interface](http://adv-r.had.co.nz/C-interface.html) from Advanced R (1st ed.) by Hadley Wickham (free online).
+ 
+See [exercises](/exercises) for exercises for each session.
 
 ## Commitment
 
