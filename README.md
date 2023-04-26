@@ -8,6 +8,7 @@ However, you do not have to be a sprint participant to join the book club!
 ## Readings
 
 Our main reading will be [Modern C](https://gustedt.gitlabpages.inria.fr/modern-c/) by Jens Gustedt. A PDF is available for free download, or there is a 35% discount code for a print or eBook copy (see the [Modern C](https://gustedt.gitlabpages.inria.fr/modern-c/) website). This book is organized in levels: 
+
  - **0 - Encounter:** summarizes the very basics of programming with C.
  - **1 - Acquaintance:** details most principal concepts and features such as control structures, data types, operators, and functions.
  - **2 - Cognition:** goes to the heart of the C language, covering pointers, C’s memory model, and most of C’s library interface. 
@@ -16,6 +17,7 @@ Our main reading will be [Modern C](https://gustedt.gitlabpages.inria.fr/modern-
 This book club will cover **levels 0 to 2** (about 200 pages).
  
 The reading will be supplemented with:
+
  - Selected exercises from [C Programming: A Modern Approach](http://knking.com/books/c2/) by K. N. King (shared under fair use).
  - The [chapter on R's C interface](http://adv-r.had.co.nz/C-interface.html) from Advanced R (1st ed.) by Hadley Wickham (free online).
 
@@ -32,23 +34,25 @@ Book club members are encouraged to sign up to present at one session to spread 
 
 ## Timing
 
-Book club meetings will be on Tuesdays (UTC). A poll will be run on the [R Contributors Slack](https://contributor.r-project.org/slack) with a closing date of **18 April, 2023** to set the time. Meetings will be recorded and shared on the Slack #book-club-modern-c channel. 
+The book club will meet in two cohorts:
 
-If a good time can not be found, will we organize the "meeting" asynchonously on the R Contributors Slack and update this page with how this will work.
+-   **Cohort 1:** 12 noon - 1 pm UTC ([find 12 noon UTC in your local time](https://everytimezone.com/s/b3dd06ec))
+-   **Cohort 2:** 7 pm - 8 pm PDT ([find 7 pm PDT in your local time](https://everytimezone.com/s/c2b9b79d))
 
 ## Schedule
 
 Please sign up to present at one of the sessions, by making a PR to this page. Links to exercises will be added in due course.
-| No. | Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  | Level | Book                | Chapters | Page count | Topic(s)                                                 | Exercises | Presenter      |
-|-----|--------|-------|---------------------|----------|-----------|----------------------------------------------------------|-----------|----------------|
-| 1   | May 16 | 0     | Modern C            | 1-3      | 28        | Compiling & running, program structure, flow control     |           | Heather Turner |
-| 2   | May 30 | 1     | Modern C            | 4-5      | 36        | Arithmetic & logical operators, data types               |           | Trang Le       |
-| 3   | Jun 13 | 1     | Modern C            | 6-7      | 25        | Derived data types, functions                            |           | Elio Campitelli |
-| 4   | Jun 27 | 1     | Modern C            | 8-10     | 31        | C library functions, style, organization & documentation |           |                |
-| 5   | Jul 11 | 1.5   | Advanced&nbsp;R<br>(1st ed) | 20       | 20        | R's C interface                                          |           |                |
-| 6   | Jul 25 | 2     | Modern C            | 11-12    | 27        | Pointers & the C memory model                            |           |                |
-| 7   | Aug 15 | 2     | Modern C            | 13       | 20        | Storage                                                  |           |                |
-| 8   | Aug 22 | 2     | Modern C            | 14       | 19        | More involved processing & IO                            |           |                |
+
+| No. | Date      | Level | Book                | Chapters | Page count | Topic(s)                                                 | Cohort 1 Presenter | Cohort 2 Presenter |
+|-----|-----------|-------|---------------------|----------|------------|----------------------------------------------------------|--------------------|--------------------|
+| 1   | May 16    | 0     | Modern C            | 1-3      | 28         | Compiling & running, program structure, flow control     | Heather Turner     |                    |
+| 2   | May 30    | 1     | Modern C            | 4-5      | 36         | Arithmetic & logical operators, data types               | Trang Le           |                    |
+| 3   | Jun 13    | 1     | Modern C            | 6-7      | 25         | Derived data types, functions                            | Elio Campitelli    |                    |
+| 4   | Jun 27    | 1     | Modern C            | 8-10     | 31         | C library functions, style, organization & documentation |                    |                    |
+| 5   | Jul 11    | 1.5   | Advanced R (1st ed) | 20       | 20         | R's C interface                                          |                    |                    |
+| 6   | Jul 25    | 2     | Modern C            | 11-12    | 27         | Pointers & the C memory model                            |                    |                    |
+| 7   | Aug 15    | 2     | Modern C            | 13       | 20         | Storage                                                  |                    |                    |
+| 8   | Aug 22    | 2     | Modern C            | 14       | 19         | More involved processing & IO                            |                    |                    |       |
 
 ### August Bonus Exercise
 
