@@ -55,7 +55,7 @@ Please sign up to present at one of the sessions, by making a PR to this page. L
 | 4   | Jun 27    | 1     | Modern C            | 8-10     | 31         | C library functions, style, organization & documentation | María Nanton       |                    |
 | 5   | Jul 11    | 1.5   | Advanced R (1st ed) | 20       | 20         | R's C interface                                          | Roberto Villegas-Diaz |                    |
 | 6   | Jul 25    | 2     | Modern C            | 11-12    | 27         | Pointers & the C memory model                            |                    |                    |
-| 7   | Aug 15    | 2     | Modern C            | 13       | 20         | Storage                                                  |                    |                    |
+| 7   | Aug 15    | 2     | Modern C            | 13       | 20         | Storage                                                  | Ivan Krylov        |                    |
 | 8   | Aug 22    | 2     | Modern C            | 14       | 19         | More involved processing & IO                            |                    |                    |       |
 
 ### August Bonus Exercise
