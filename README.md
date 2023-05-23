@@ -39,7 +39,7 @@ Book club members are encouraged to sign up to present at one session to spread 
 The book club will meet in two cohorts:
 
 -   **Cohort 1:** 12 noon - 1 pm UTC ([find 12 noon UTC in your local time](https://everytimezone.com/s/b3dd06ec)).
--   **Cohort 2:** 10 am - 11 am PDT ([find 10 am PDT in your local time](https://everytimezone.com/s/1dd66f3f))
+-   **Cohort 2:** 10 am - 11 am PDT ([find 10 am PDT in your local time](https://everytimezone.com/s/1dd66f3f)).
 
 Sign-up to attend the sessions on the [R Contributors Meetup](https://www.meetup.com/r-contributors/events/).
 
