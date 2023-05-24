@@ -51,11 +51,11 @@ Please sign up to present at one of the sessions, by making a PR to this page. L
 |-----|-----------|-------|---------------------|----------|------------|----------------------------------------------------------|--------------------|--------------------|
 | 1   | May 16    | 0     | Modern C            | 1-3      | 28         | Compiling & running, program structure, flow control     | Heather Turner     |                    |
 | 2   | May 30    | 1     | Modern C            | 4-5      | 36         | Arithmetic & logical operators, data types               | Trang Le           |                    |
-| 3   | Jun 13    | 1     | Modern C            | 6-7      | 25         | Derived data types, functions                            |     |    Elio Campitelli                |
+| 3   | Jun 13    | 1     | Modern C            | 6-7      | 25         | Derived data types, functions                            |                    | Elio Campitelli    |
 | 4   | Jun 27    | 1     | Modern C            | 8-10     | 31         | C library functions, style, organization & documentation | María Nanton       |                    |
 | 5   | Jul 11    | 1.5   | Advanced R (1st ed) | 20       | 20         | R's C interface                                          | Roberto Villegas-Diaz |                 |
 | 6   | Jul 25    | 2     | Modern C            | 11-12    | 27         | Pointers & the C memory model                            | Malcolm Barrett    |                    |
-| 7   | Aug 15    | 2     | Modern C            | 13       | 20         | Storage                                                  | Ivan Krylov        |                    |
+| 7   | Aug 8     | 2     | Modern C            | 13       | 20         | Storage                                                  | Ivan Krylov        |                    |
 | 8   | Aug 22    | 2     | Modern C            | 14       | 19         | More involved processing & IO                            |                    |                    |       |
 
 ### August Bonus Exercise
