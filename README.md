@@ -49,8 +49,8 @@ Please sign up to present at one of the sessions, by making a PR to this page. L
 
 | No. | Date      | Level | Book                | Chapters | Page count | Topic(s)                                                 | Cohort 1 Presenter | Cohort 2 Presenter |
 |-----|-----------|-------|---------------------|----------|------------|----------------------------------------------------------|--------------------|--------------------|
-| 1   | May 16    | 0     | Modern C            | 1-3      | 28         | Compiling & running, program structure, flow control     | Heather Turner     |                    |
-| 2   | May 30    | 1     | Modern C            | 4-5      | 36         | Arithmetic & logical operators, data types               | Trang Le           |                    |
+| 1   | May 16    | 0     | Modern C            | 1-3      | 28         | Compiling & running, program structure, flow control     | [Heather Turner ](https://hturner.github.io/c-book-club-session1)    |                    |
+| 2   | May 30    | 1     | Modern C            | 4-5      | 36         | Arithmetic & logical operators, data types               | [Trang Le](https://slides.com/trangdata/modernc-4-5)           |                    |
 | 3   | Jun 13    | 1     | Modern C            | 6-7      | 25         | Derived data types, functions                            |                    | Elio Campitelli    |
 | 4   | Jun 27    | 1     | Modern C            | 8-10     | 31         | C library functions, style, organization & documentation | María Nanton       |                    |
 | 5   | Jul 11    | 1.5   | Advanced R (1st ed) | 20       | 20         | R's C interface                                          | Roberto Villegas-Diaz |                 |
