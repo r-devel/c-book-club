@@ -31,7 +31,7 @@ int nextDevice(int from)
 }
 ```
 
-## If, for
+### If, for
 
 Creating a 3 x 3 identity matrix (part of wider code base related to [transformation matrices](https://en.wikipedia.org/wiki/Transformation_matrix)). 
 
@@ -52,7 +52,7 @@ void identity(LTransform m)
 
 `LTransfrom` type defined here: https://github.com/r-devel/r-svn/blob/2c0ed92eae8a9845b42dfcd984b9942e751e57a6/src/library/grid/src/grid.h#L153
 
-## Switch 
+### Switch 
 
 Compute a "padj" value, which is 0 if the axis label should be horizontal to the axis and 1 otherwise. (See `?par` for the definition of `las` in R; 
 `side' numbers the sides of the plot from the bottom, in a clockwise direction.
