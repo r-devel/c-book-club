@@ -54,8 +54,8 @@ void identity(LTransform m)
 
 ### Switch 
 
-Compute a "padj" value, which is 0 if the axis label should be horizontal to the axis and 1 otherwise. (See `?par` for the definition of `las` in R; 
-`side' numbers the sides of the plot from the bottom, in a clockwise direction.
+Compute a "padj" value, which is 0 if the axis label should be parallel to the axis and 0.5 if it should be perpendicular. (See `?par` for the definition of `las` in R; 
+`side` numbers the sides of the plot from the bottom, in a clockwise direction.)
 
 ```c
 static double ComputePAdjValue(double padj, int side, int las)
