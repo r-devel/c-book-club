@@ -54,7 +54,7 @@ Please sign up to present at one of the sessions, by making a PR to this page. L
 | 3   | Jun 13    | 1     | Modern C            | 6-7      | 25         | Derived data types, functions                            |                    | [Elio Campitelli](https://docs.google.com/presentation/d/12t9JtRHt50Nx63l-s7qkzd6v_O-C8dZfczvmkJvuaUs)    |
 | 4   | Jun 27    | 1     | Modern C            | 8-10     | 31         | C library functions, style, organization & documentation | [María Nanton](https://mcnanton.quarto.pub/c-book-club-for-r-contributors/#/title-slide)       |                    |
 | 5   | Jul 11    | 1.5   | Advanced R (1st ed) | 20       | 20         | R's C interface                                          | [Roberto Villegas-Diaz](https://www.robertovillegas-diaz.com/presentations/c-bookclub_r-c-interface) | [Pao Corrales](https://docs.google.com/presentation/d/1ENPx-h1Nb7H_sOXeBcwTkNLK7EhJR4N6HBw-0lH-l_U/edit#slide=id.g2582f30d581_0_128)    |
-| 6   | Jul 25    | 2     | Modern C            | 11-12    | 27         | Pointers & the C memory model                            |     |                    |
+| 6   | Jul 25    | 2     | Modern C            | 11-12    | 27         | Pointers & the C memory model                            | Ivan Krylov        |                    |
 | 7   | Aug 8     | 2     | Modern C            | 13       | 20         | Storage                                                  | Ivan Krylov        |                    |
 | 8   | Aug 22    | 2     | Modern C            | 14       | 19         | More involved processing & IO                            |                    |                    |       |
 
