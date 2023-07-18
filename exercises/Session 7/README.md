@@ -45,6 +45,7 @@ exhausted (previously made allocations taking all available space), in
 which case `dyn_alloc` should return `NULL`.
 
 <details><summary>Hint 0: where do we even start?</summary>
+
 One of the simplest ways to implement a dynamic memory allocator is
 called sequential allocation: keep a `free` pointer pointing to the
 start of the unallocated area in the buffer and an `end` pointer to the
@@ -124,6 +125,7 @@ dyn_dealloc(context, &ptr);
 ```
 
 <details><summary>Hint 1: two more ways to implement an allocator</summary>
+
 The second simplest way to implement an allocator, the one that can
 actually deallocate memory, is called a free-list. Inside the buffer,
 there is a number of variously-sized blocks, each containing a pointer
@@ -172,13 +174,61 @@ states.
 ```
 </details>
 
+Additional task 2
+-----------------
+
+Implement the following function:
+
+```c
+bool dyn_realloc(void * context, void ** ptr, size_t newsize);
+```
+
+The `dyn_realloc` function takes the following arguments:
+
+ * `context`, the pointer previously initialised by `dyn_init`.
+ * `ptr`, a pointer to a pointer previously returned by `dyn_alloc` (or
+   `NULL`).
+ * `newsize`, the desired size of the buffer.
+
+Given a pointer previously returned by `dyn_alloc` and a non-zero
+`newsize`, `dyn_realloc` should change the buffer to be valid for
+accessing at least `newsize` bytes. If it's not possible to enlarge the
+buffer in place, the function should attempt to allocate a new buffer,
+copy the previous contents, then deallocate the old buffer, updating
+`*ptr` to the new value.
+
+If the function cannot fulfill the request, it should return `false` and
+leave `*ptr` unchanged. On success, the function should return `true`
+regardless of whether `*ptr` was changed.
+
+When `*ptr` is a null pointer, the result should be equivalent to
+`dyn_alloc(context, newsize)`. When `newsize` is `0`, the result should
+be equivalent to `dyn_dealloc(context, &ptr)`. (In fact, it may be
+easier to implement `dyn_alloc` and `dyn_dealloc` in terms of
+`dyn_realloc`.)
+
+The intended way to use the function is as follows:
+
+```c
+// ...initialise the context...
+void * ptr = dyn_alloc(context, size);
+// ...use the pointer...
+if (dyn_realloc(context, &ptr, newsize)) {
+	// ptr is now valid for `newsize` bytes instead of `size`
+} else {
+	// handle the error
+}
+```
+
 Checking your solution
 ----------------------
 
 Name your solution file `allocator.c`. If you're doing the additional
 task 0, put `#define ADDITIONAL_TASK_0` on a separate line somewhere in
-your file. For task 1, `#define ADDITIONAL_TASK_1`. Put the
-`check_allocator.c` file in the same directory, compile and run it. Your
-`allocator.c` will be included automatically. Use AddressSanitizer
-and/or Valgrind to ensure that your allocator plays by the rules while
-being tested.
+your file. Respectively for tasks 1 and 2, add
+`#define ADDITIONAL_TASK_1` and/or `#define ADDITIONAL_TASK_2`.
+
+Put the `check_allocator.c` file in the same directory, compile and run
+it. Your `allocator.c` will be included automatically. Use
+AddressSanitizer and/or Valgrind to ensure that your allocator plays by
+the rules while being tested.
