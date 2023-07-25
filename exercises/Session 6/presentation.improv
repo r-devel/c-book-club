@@ -1,0 +1,84 @@
+-- this is a script for https://github.com/aitap/improv
+
+chdir = true
+exec.path = 'sh'
+exec.argv = {
+	[0] = 'sh',
+	'-c',
+	'clear && export LC_ALL=C.UTF-8 && PS1="\\[\\e[1m\\]> \\[\\e[0m\\]" bash --norc'
+}
+period = .35
+chunks = {}
+
+local function append(dest, src)
+	for i = 1, #src do
+		dest[#dest+1] = src[i]
+	end
+end
+
+local function makegdb(binary) return ('gvim --remote %s.c; make %s && gdb %s\n'):format(binary, binary, binary) end
+
+append(chunks, {
+	makegdb 'modernC/11/ch12',
+	'b main\nr\n',
+	-- splitting example
+	'until 140\n',
+	's\n',
+	'p *src\n',
+	'until 63\n',
+	'p src->str + where\n',
+	'p next->str\n',
+	'n\n',
+	'p src->str + where + 1\n',
+	'x /11c src->str\n',
+	'until 70\n',
+	'p *src\np*next\n',
+	'fini\n',
+	-- joining example
+	'until 143\n',
+	's\n',
+	'until 79\nn\n',
+	'p x->str\np next->str\np newstr\n',
+	'n\n', 'x /11c x->str\n',
+	'until 89\n',
+	'p *x\np *next\n',
+	'fini\n',
+	-- join at newlines
+	'until 162\n',
+	's\n',
+	'until 97\n',
+	'p x->str\np newline\np newline - x->str\n',
+	'until 101\n',
+	'p *x\np *x->next\n',
+	'until 97\n',
+	'p x->str\np newline\np newline - x->str\n',
+	'fini',
+	'p *x\n','until 165\n',
+	'c\nquit\n'
+})
+
+append(chunks, {
+	makegdb 'figures/use-fptr',
+	'b main\nr\n',
+	'b f\n',
+	'until 13\n',
+	'n\n',
+	'c\n',
+	'bt\n',
+	'c\n',
+	'delete 2\n',
+	'c\n',
+	'quit\n',
+})
+
+append(chunks, {
+	makegdb 'modernC/11/ch13',
+})
+
+append(chunks, {
+	makegdb 'modernC/12/ex25',
+})
+
+append(chunks, {
+	'exit ###'
+})
