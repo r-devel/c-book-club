@@ -1,0 +1,103 @@
+-- see https://github.com/aitap/improv for more information
+
+chdir = true
+exec.path = 'sh'
+exec.argv = {
+	[0] = 'sh',
+	'-c',
+	'clear && export LC_ALL=C.UTF-8 && PS1="\\[\\e[1m\\]> \\[\\e[0m\\]" bash --norc'
+}
+period = .35
+chunks = {}
+
+local function append(dest, src)
+	for i = 1, #src do
+		dest[#dest+1] = src[i]
+	end
+end
+
+local function makegdb(binary) return ('gvim --remote %s.c; make %s && gdb %s\n'):format(binary, binary, binary) end
+
+append(chunks, {
+	makegdb 'examples/stack_overflow',
+	'l main\n',
+	'b 5\nr\n',
+	'n\n',
+	'info proc mappings\n',
+	'p sizeof n\n' .. 'p &n[0]\n' .. 'p &n[size-1]\n',
+	'c\nquit\n'
+})
+
+append(chunks, {
+	makegdb 'examples/large_malloc',
+	'l main\n',
+	'b 20\nr\n',
+	'until 27\n',
+	'until 31\n',
+	'info proc mappings\n',
+	'c\nquit\n'
+})
+
+append(chunks, {
+	makegdb 'CPAMA/17/ex03',
+	'l main\nb 22\n',
+	'r\n',
+	's\n',
+	'n\n',
+	'fini\n',
+	'c\n',
+	-- try to create an array that is too large
+	'r\n',
+	'set variable n = ((size_t)-1)/3\n',
+	'p n\n',
+	's\n', 'n\n', 'c\n',
+	-- work around our protection
+	'r\n',
+	'set variable n = ((size_t)1 << 62) + 42\n',
+	's\n',
+	'disas\n',
+	'set $pc = create_array + 15',
+	'until *(&create_array + 26)',
+	'p $rdi',
+	'n\n', 'c\n',
+	'info proc mappings\n',
+	'p ret + i\n',
+	'c\nquit\n'
+})
+
+append(chunks, {
+	makegdb 'CPAMA/16/inventory',
+	'l insert\nb 92\n',
+	'r\n',
+	'i\n',
+	'p num_parts\np allocated_parts\n',
+	'until 93\np newsz\np inventory\n',
+	'n\np newinv\n',
+	'c',
+	'42\npotato\n100\n',
+	'p\n',
+	-- fill in the parts database
+	'i\n'..'1'..'\n'..'beetroot' ..'\n'..'100'..'\n'..
+	'i\n'..'2'..'\n'..'cabbage'  ..'\n'.. '30'..'\n'..
+	'i\n'..'3'..'\n'..'apple'    ..'\n'..'200'..'\n'..
+	'i\n'..'4'..'\n'..'pear'     ..'\n'..'200'..'\n'..
+	'i\n'..'5'..'\n'..'marrow'   ..'\n'.. '50'..'\n'..
+	'i\n'..'6'..'\n'..'tomato'   ..'\n'..'100'..'\n'..
+	'i\n'..'7'..'\n'..'pepper'   ..'\n'..'100'..'\n'..
+	'i\n'..'8'..'\n'..'aubergine'..'\n'.. '50'..'\n'..
+	'i\n'..'9'..'\n'..'carrot'   ..'\n'..'100'..'\n',
+	'p\n',
+	-- one more "part" to make another allocation
+	'i\n',
+	'p num_parts\np allocated_parts\n',
+	'until 93\np newsz\np inventory\n',
+	'n\np newinv\n',
+	'c',
+	'10\npumpkin\n30\n',
+	'p\n',
+	'q\nq\n'
+})
+
+append(chunks, {
+	'exit ###'
+})
